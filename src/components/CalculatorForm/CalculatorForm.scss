@@ -1,0 +1,41 @@
+form {
+  .input-number {
+    width: 55px;
+    height: 35px;
+    margin: 0 8%;
+  }
+
+  .result-line {
+    border-bottom: 2px solid black;
+    width: 450px;
+    margin: 15px auto;
+  }
+
+  .result-area {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .submit-button-container {
+    margin: 15px 0;
+
+    input {
+      height: 35px;
+      font-weight: bold;
+      border-radius: 6px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(114, 203, 209);
+      cursor: pointer;
+    }
+    input:hover {
+      opacity: 0.8;
+      color: white;
+      background-color: green;
+    }
+  }
+
+  #operands {
+    height: 35px;
+    width: 45px;
+  }
+}
