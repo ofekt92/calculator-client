@@ -47,7 +47,8 @@ const Calculator = () => {
     }
   };
 
-  /**Posts a new calculation request to the server.
+  /**
+   * Posts a new calculation request to the server.
    * Upon receiving the result, update the state so we can send it to the form and history.
    */
   const postNewCalculationRequest = async (firstN, secondN, operand) => {
@@ -103,6 +104,12 @@ const Calculator = () => {
     }
   };
 
+  /**
+   * Posts a calculation request to the api, returns the result or the error message.
+   * @param {String} url URL to send request to.
+   * @param {Object} request request data to send to the api.
+   * @returns calculation response or error message.
+   */
   const postCalculation = async (url, request) => {
     let result;
     try {
@@ -122,7 +129,9 @@ const Calculator = () => {
     return result;
   };
 
-  /** Checks if the deleted value is not the one to be updated, and if not - sends an HTTP Delete request to the server. */
+  /**
+   * Checks if the deleted value is not the one to be updated, and if not - sends an HTTP Delete request to the server.
+   * */
   const onDeleteClickedHandler = async (recordId) => {
     try {
       if (updateValues?.id === recordId) {
@@ -138,7 +147,9 @@ const Calculator = () => {
     }
   };
 
-  /**Sets the values to be updated in the state, so upon submitting again we can send to the API */
+  /**
+   * Sets the values to be updated in the state, so upon submitting again we can send a new calculation request to the API.
+   * */
   const onUpdateClickedHandler = (recordId) => {
     const recordToUpdate = history.find((rec) => rec.id === recordId);
     if (recordToUpdate) {

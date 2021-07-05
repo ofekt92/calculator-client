@@ -52,6 +52,10 @@ const CalculatorForm = ({ operands, onFormSubmit, calcResult, updateValues }) =>
     onFormSubmit(inputs);
   };
 
+  /**
+   * Update the form's state (for two way binding).
+   * @param {Event} event 
+   */
   const onInputChangedHandler = (event) => {
     if (event.target.value != null) {
       switch (event.target.id) {
